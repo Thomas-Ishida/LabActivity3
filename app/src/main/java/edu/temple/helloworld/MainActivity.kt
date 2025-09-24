@@ -20,7 +20,13 @@ class MainActivity : AppCompatActivity() {
 
         
         findViewById<Button>(R.id.clickMeButton).setOnClickListener {
-            displayTextView.text = "Hello, ${findViewById<EditText>(R.id.nameEditText).text}"
+
+            if ((findViewById<EditText>(R.id.nameEditText).text.isEmpty())){
+                displayTextView.text = "ERROR, YOU NEED TO PUT YOUR NAME"
+            }
+            else{
+                displayTextView.text = "Hello, ${findViewById<EditText>(R.id.nameEditText).text}"
+            }
         }
 
 
