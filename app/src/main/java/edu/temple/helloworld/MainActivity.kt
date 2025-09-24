@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.clickMeButton).setOnClickListener {
 
             if ((findViewById<EditText>(R.id.nameEditText).text.isEmpty())){
-                displayTextView.text = "ERROR, YOU NEED TO PUT YOUR NAME"
+                displayTextView.text = "ERROR, TEXT FIELD EMPTY, NEEDS A NAME"
             }
             else{
                 displayTextView.text = "Hello, ${findViewById<EditText>(R.id.nameEditText).text}"
